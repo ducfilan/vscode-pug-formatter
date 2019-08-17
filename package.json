@@ -22,16 +22,13 @@
 		"beautify",
 		"beautifier"
 	],
-	"activationEvents": [
-		"onCommand:extension.helloWorld"
-	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"configuration": {
 			"type": "object",
 			"title": "Pug formatter configuration options",
 			"properties": {
-				"pugbeautify.fillTab": {
+				"pugFormatter.fillTab": {
 					"type": [
 						"boolean",
 						"null"
@@ -39,12 +36,12 @@
 					"default": null,
 					"description": "Indent with Tabs, if false, with spaces."
 				},
-				"pugbeautify.omitDiv": {
+				"pugFormatter.omitDiv": {
 					"type": "boolean",
 					"default": false,
 					"description": "Omit div tag when it has id or class."
 				},
-				"pugbeautify.tabSize": {
+				"pugFormatter.tabSize": {
 					"type": [
 						"number",
 						"null"
