@@ -1,25 +1,59 @@
 {
 	"name": "vscode-pug-formatter",
 	"displayName": "vscode-pug-formatter",
-	"description": "Simple Pug/Jade formatter",
+	"description": "A Pug/Jade formatter integrated with system formatter",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.37.0"
 	},
+	"icon": "icon.png",
 	"categories": [
-		"Other"
+		"Formatters"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ducfilan/vscode-pug-formatter.git"
+	},
+	"keywords": [
+		"pug",
+		"jade",
+		"format",
+		"formatter",
+		"beautify",
+		"beautifier"
 	],
 	"activationEvents": [
 		"onCommand:extension.helloWorld"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+		"configuration": {
+			"type": "object",
+			"title": "Pug formatter configuration options",
+			"properties": {
+				"pugbeautify.fillTab": {
+					"type": [
+						"boolean",
+						"null"
+					],
+					"default": null,
+					"description": "Indent with Tabs, if false, with spaces."
+				},
+				"pugbeautify.omitDiv": {
+					"type": "boolean",
+					"default": false,
+					"description": "Omit div tag when it has id or class."
+				},
+				"pugbeautify.tabSize": {
+					"type": [
+						"number",
+						"null"
+					],
+					"default": null,
+					"description": "When `fillTab` is false, fill `tabSize` spaces."
+				}
 			}
-		]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -38,5 +72,8 @@
 		"typescript": "^3.3.1",
 		"tslint": "^5.12.1",
 		"vscode-test": "^1.0.2"
+	},
+	"dependencies": {
+		"pug-beautify": "^0.1.1"
 	}
 }
