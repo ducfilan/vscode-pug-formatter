@@ -10,6 +10,9 @@
 	"categories": [
 		"Formatters"
 	],
+	"activationEvents": [
+		"onLanguage:jade"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ducfilan/vscode-pug-formatter.git"
@@ -24,6 +27,18 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"languages": [
+			{
+				"id": "jade",
+				"aliases": [
+					"Pug"
+				],
+				"extensions": [
+					"pug",
+					"jade"
+				]
+			}
+		],
 		"configuration": {
 			"type": "object",
 			"title": "Pug formatter configuration options",
