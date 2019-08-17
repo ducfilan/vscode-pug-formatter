@@ -4,7 +4,7 @@ import * as pugBeautify from 'pug-beautify';
 export function activate(context: vscode.ExtensionContext) {
 	vscode.languages.registerDocumentFormattingEditProvider('jade', {
 		provideDocumentFormattingEdits(document: vscode.TextDocument): vscode.TextEdit[] {
-			let tabSize = 4;
+			let tabSize = 2;
 			let insertSpaces = true;
 			const editor = vscode.window.activeTextEditor;
 			if (editor) {
