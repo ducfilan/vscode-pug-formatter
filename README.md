@@ -1,7 +1,7 @@
 
 # vscode-pug-formatter
 
-> [pug-formatter](https://github.com/ducfilan/pug-formatter) plugin for VS Code.
+> [vscode-pug-formatter](https://github.com/ducfilan/vscode-pug-formatter) plugin for VS Code.
 
 ## Install
 
