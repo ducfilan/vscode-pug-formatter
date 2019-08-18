@@ -24,8 +24,8 @@ Right click and select "Format Document".
 
 **pugFormatter.fillTab**
 
-  * Type: `Boolean|null`
-  * Default: Obtained from the current document (`null`)
+  * Type: `enum` (`default`, `yes`, `no`)
+  * Default: Obtained from the current document default setting (`default`)
 
 Indent with Tabs, if false, with spaces.
 
