@@ -2,7 +2,7 @@
 	"name": "vscode-pug-formatter",
 	"displayName": "vscode-pug-formatter",
 	"description": "A Pug/Jade formatter integrated with system formatter",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "ducfilan",
 	"engines": {
 		"vscode": "^1.37.0"
