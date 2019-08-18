@@ -3,6 +3,7 @@
 	"displayName": "vscode-pug-formatter",
 	"description": "A Pug/Jade formatter integrated with system formatter",
 	"version": "0.0.1",
+	"publisher": "ducfilan",
 	"engines": {
 		"vscode": "^1.37.0"
 	},
@@ -41,14 +42,16 @@
 		],
 		"configuration": {
 			"type": "object",
-			"title": "Pug formatter configuration options",
+			"title": "Pug formatter",
 			"properties": {
 				"pugFormatter.fillTab": {
-					"type": [
-						"boolean",
-						"null"
+					"type": "string",
+					"enum": [
+						"default",
+						"yes",
+						"no"
 					],
-					"default": null,
+					"default": "default",
 					"description": "Indent with Tabs, if false, with spaces."
 				},
 				"pugFormatter.omitDiv": {

@@ -1,25 +1,18 @@
 import * as vscode from 'vscode';
 import * as pugBeautify from 'pug-beautify';
 
+const fillTabOptions = {
+	default: "default",
+	yes: "yes",
+	no: "no"
+};
+
 export function activate(context: vscode.ExtensionContext) {
 	vscode.languages.registerDocumentFormattingEditProvider('jade', {
 		provideDocumentFormattingEdits(document: vscode.TextDocument): vscode.TextEdit[] {
-			let tabSize = 2;
-			let insertSpaces = true;
-			const editor = vscode.window.activeTextEditor;
-			if (editor) {
-				tabSize = editor.options.tabSize as number;
-				insertSpaces = editor.options.insertSpaces as boolean;
-			}
-
-			const editorConfig = <any>vscode.workspace.getConfiguration('pugFormatter');
 
 			const text = document.getText();
-			const options = {
-				fill_tab: editorConfig.fillTab || insertSpaces,
-				omit_div: editorConfig.omitDiv,
-				tab_size: editorConfig.tabSize || tabSize
-			};
+			const options = getBeautifyOptions();
 
 			let result = '';
 			try {
@@ -36,6 +29,27 @@ export function activate(context: vscode.ExtensionContext) {
 			return [vscode.TextEdit.replace(range, result)];
 		}
 	});
+}
+
+function getBeautifyOptions() {
+	const editorConfig = <any>vscode.workspace.getConfiguration('pugFormatter');
+
+	let defaultSettings = {
+		tabSize: 2,
+		fillTab: false
+	};
+
+	const editor = vscode.window.activeTextEditor;
+	if (editor) {
+		defaultSettings.tabSize = editor.options.tabSize as number;
+		defaultSettings.fillTab = !(editor.options.insertSpaces as boolean);
+	}
+
+	return {
+		fill_tab: editorConfig.fillTab === fillTabOptions.default ? defaultSettings.fillTab : (editorConfig.fillTab === fillTabOptions.yes),
+		omit_div: editorConfig.omitDiv,
+		tab_size: editorConfig.tabSize || defaultSettings.tabSize
+	};
 }
 
 export function deactivate() { }
