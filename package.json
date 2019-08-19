@@ -67,12 +67,12 @@
 					"default": null,
 					"description": "When 'fill_tab' is false, fill 'tab_size' spaces, default 4"
 				},
-				"pugFormatter.separator_space": {
+				"pugFormatter.separatorSpace": {
 					"type": "boolean",
 					"default": true,
 					"description": "When 'separator_space' is true, the attribute separator is comma, default true"
 				},
-				"pugFormatter.omit_empty_lines": {
+				"pugFormatter.omitEmptyLines": {
 					"type": "boolean",
 					"default": true,
 					"description": "When 'separator_space' is false, delete line blank, default true"

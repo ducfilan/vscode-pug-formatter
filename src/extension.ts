@@ -49,8 +49,8 @@ function getBeautifyOptions() {
 		fill_tab: editorConfig.fillTab === fillTabOptions.default ? defaultSettings.fillTab : (editorConfig.fillTab === fillTabOptions.yes),
 		omit_div: editorConfig.omitDiv,
 		tab_size: editorConfig.tabSize || defaultSettings.tabSize,
-		separator_space: editorConfig.separator_space,
-		omit_empty_lines: editorConfig.omit_empty_lines
+		separator_space: editorConfig.separatorSpace,
+		omit_empty_lines: editorConfig.omitEmptyLines
 	};
 }
 
