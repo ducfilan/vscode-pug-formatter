@@ -52,12 +52,12 @@
 						"no"
 					],
 					"default": "default",
-					"description": "Indent with Tabs, if false, with spaces."
+					"description": "Fill whether tab or space, default true"
 				},
 				"pugFormatter.omitDiv": {
 					"type": "boolean",
 					"default": false,
-					"description": "Omit div tag when it has id or class."
+					"description": "Whether omit 'div' tag, default false"
 				},
 				"pugFormatter.tabSize": {
 					"type": [
@@ -65,7 +65,17 @@
 						"null"
 					],
 					"default": null,
-					"description": "When `fillTab` is false, fill `tabSize` spaces."
+					"description": "When 'fill_tab' is false, fill 'tab_size' spaces, default 4"
+				},
+				"pugFormatter.separator_space": {
+					"type": "boolean",
+					"default": true,
+					"description": "When 'separator_space' is true, the attribute separator is comma, default true"
+				},
+				"pugFormatter.omit_empty_lines": {
+					"type": "boolean",
+					"default": true,
+					"description": "When 'separator_space' is false, delete line blank, default true"
 				}
 			}
 		}

@@ -12,36 +12,20 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Usage
 
-Press `Alt+Shift+F` to format the openning pug file or;
-Right click and select "Format Document".
+  * Press `Alt+Shift+F` to format the openning pug file or;
+  * Right click and select "Format Document".
 
 ## Supported languages
 
   * Jade
   * Pug
 
-## Supported settings
-
-**pugFormatter.fillTab**
-
-  * Type: `enum` (`default`, `yes`, `no`)
-  * Default: Obtained from the current document default setting (`default`)
-
-Indent with Tabs, if false, with spaces.
-
-**pugFormatter.omitDiv**
-
-  * Type: `Boolean`
-  * Default: `false`
-
-Omit div tag when it has id or class.
-
-**pugFormatter.fillTab**
-
-  * Type: `Boolean|null`
-  * Default: Obtained from the current document (`null`)
-
-When `fillTab` is false, fill `tabSize` spaces.
+## Options
+  * `fill_tab` - `enum` (`default`, `yes`, `no`), fill whether tab or space, default `default` (current document default setting).
+  * `omit_div` - `boolean`, whether omit 'div' tag, default `false`.
+  * `tab_size` - `number`, when 'fill_tab' is `false`, fill 'tab_size' spaces, default `4`.
+  * `separator_space` - `boolean`, When 'separator_space' is `true`, the attribute separator is comma, default `true`.
+  * `omit_empty_lines` - When 'separator_space' is `false`, delete line blank, default `true`.
 
 ## License
 This software is released under the terms of the MIT license.
