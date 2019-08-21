@@ -52,12 +52,12 @@
 						"no"
 					],
 					"default": "default",
-					"description": "Fill whether tab or space, default true"
+					"description": "Fill whether tab or space, default by system settings"
 				},
-				"pugFormatter.omitDiv": {
+				"pugFormatter.removeDiv": {
 					"type": "boolean",
 					"default": false,
-					"description": "Whether omit 'div' tag, default false"
+					"description": "Whether remove 'div' tags, default false"
 				},
 				"pugFormatter.tabSize": {
 					"type": [
@@ -70,12 +70,12 @@
 				"pugFormatter.separatorSpace": {
 					"type": "boolean",
 					"default": true,
-					"description": "When 'separator_space' is true, the attribute separator is comma, default true"
+					"description": "true: The attribute separator is a space, else a comma, default is space"
 				},
-				"pugFormatter.omitEmptyLines": {
+				"pugFormatter.allowEmptyLines": {
 					"type": "boolean",
 					"default": true,
-					"description": "When 'separator_space' is false, delete line blank, default true"
+					"description": "Allow blank lines, default true"
 				}
 			}
 		}
@@ -98,7 +98,5 @@
 		"tslint": "^5.12.1",
 		"vscode-test": "^1.0.2"
 	},
-	"dependencies": {
-		"pug-beautify": "^0.1.1"
-	}
+	"dependencies": {}
 }

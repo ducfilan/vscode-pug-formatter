@@ -21,11 +21,11 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
   * Pug
 
 ## Options
-  * `fill_tab` - `enum` (`default`, `yes`, `no`), fill whether tab or space, default `default` (current document default setting).
-  * `omit_div` - `boolean`, whether omit 'div' tag, default `false`.
-  * `tab_size` - `number`, when 'fill_tab' is `false`, fill 'tab_size' spaces, default `4`.
-  * `separator_space` - `boolean`, When 'separator_space' is `true`, the attribute separator is comma, default `true`.
-  * `omit_empty_lines` - When 'separator_space' is `false`, delete line blank, default `true`.
+  * `Fill Tab` - `enum` (`default`, `yes`, `no`), fill whether tab or space, default `default` (current document default setting).
+  * `Remove Div` - `boolean`, whether remove `div` tag, default `false`.
+  * `Tab Size` - `number`, when 'fill_tab' is `false`, fill 'tab_size' spaces, default `4`.
+  * `Separator Space` - `boolean`, `true`: The attribute separator is a `space`, else a `comma`, default is `space`.
+  * `Allow Empty Lines` - whether allow blank lines, default `true`.
 
 ## License
 This software is released under the terms of the MIT license.

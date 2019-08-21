@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import * as pugBeautify from 'pug-beautify';
+import * as pugBeautify from './pug-beautify';
 
 const fillTabOptions = {
 	default: "default",
@@ -16,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 			let result = '';
 			try {
-				result = pugBeautify(text, options);
+				result = pugBeautify.default(text, options);
 			} catch (err) {
 				vscode.window.showErrorMessage(err);
 			}
@@ -47,10 +47,10 @@ function getBeautifyOptions() {
 
 	return {
 		fill_tab: editorConfig.fillTab === fillTabOptions.default ? defaultSettings.fillTab : (editorConfig.fillTab === fillTabOptions.yes),
-		omit_div: editorConfig.omitDiv,
+		remove_div: editorConfig.removeDiv,
 		tab_size: editorConfig.tabSize || defaultSettings.tabSize,
 		separator_space: editorConfig.separatorSpace,
-		omit_empty_lines: editorConfig.omitEmptyLines
+		allow_empty_lines: editorConfig.allowEmptyLines
 	};
 }
 

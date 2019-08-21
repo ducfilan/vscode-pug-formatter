@@ -1,6 +1,9 @@
 # Change Log
 
 All notable changes to the "vscode-pug-formatter" extension will be documented in this file.
+## [0.6.0]
+- Fix settings (`separator_space` and `omit_empty_lines`)
+- Clarify settings' meaning
 
 ## [0.5.0]
 
