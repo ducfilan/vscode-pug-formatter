@@ -1,3 +1,5 @@
+### :no_entry:  DISCONTINUED! :no_entry: Please consider using prettier's [plugin-pug](https://github.com/prettier/plugin-pug) instead!
+
 
 # vscode-pug-formatter
 
